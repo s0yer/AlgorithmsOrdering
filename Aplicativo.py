@@ -1,7 +1,14 @@
 from Listas import *
+from random import *
 
 
-novalista=criaLista1()
-listaFib=listaFibonacci(300)
-print(novalista)
-print(listaFib)
+def main():
+    novalista = criaLista1()
+    print(sorted(novalista))
+
+    listaFib = listaFibonacci(10)
+    shuffle(listaFib)
+    print(listaFib)
+    print(sorted(listaFib))
+
+main()
