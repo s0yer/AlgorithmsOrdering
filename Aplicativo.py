@@ -1,6 +1,6 @@
 from Listas import *
 from random import *
-
+from Algoritmos import *
 
 def main():
     novalista = criaLista1()
@@ -9,6 +9,6 @@ def main():
     listaFib = listaFibonacci(10)
     shuffle(listaFib)
     print(listaFib)
-    print(sorted(listaFib))
+    print(insertionSort(listaFib))
 
 main()
