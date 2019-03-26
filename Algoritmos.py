@@ -1,4 +1,5 @@
 
+#Algorithms Functions
 
 def insertionSort(k):
     for i in range(1,len(k)):
