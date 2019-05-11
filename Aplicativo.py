@@ -9,7 +9,7 @@ def main():
 
     #Create new established list and sort
     #Cria nova lista estabelecida e ordena
-    novalista = criaLista1()
+    novalista = listaRandom(10)
     print(sorted(novalista))
 
     #Create a Fibonacci Sequence with 'n' positions
