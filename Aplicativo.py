@@ -2,10 +2,24 @@
 #Bibliotecas importadas
 from Listas import *
 from random import *
+from Funcoes import *
 from Algoritmos import *
-from time import *
+
 
 def main():
+    esperando_entrada = True
+
+    while esperando_entrada:
+        print('Escolha a opção: ')
+        print('l: cria lista de tamanho n random')
+        print('f: cria lista fibonacci de tamanho n embaralhada')
+        print('p: Mostrar os participantes:')
+        print('m: Minerar um novo bloco')
+        print('h: Manipular o blockchain')
+        print('o: Obtem saldo do participante')
+        print('s: Sair. ')
+
+    escolha = escolhaUsuario()
 
     #Create new established list and sort
     #Cria nova lista estabelecida e ordena
@@ -22,23 +36,13 @@ def main():
     shuffle(listaFib)
     print(listaFib)
     
-    #Order and check execution time Insertion Sort
-    #Ordena e verifica tempo de Execução Insertion Sort
-    inicio = time()
-    print(insertionSort(listaFib))
-    fim=time()
-    print('Tempo de execução InsertionSort: %f'  %(fim-inicio))
+
     
     #Shuffles the list -> listaFib
     #Embaralha a lista -> listaFib
     shuffle(listaFib)
     print(listaFib)
     
-    #Order and check runtime Bubble Sort
-    #Ordena e verifica tempo de Execução Bubble Sort
-    inicio = time()
-    print(bubbleSort(listaFib))
-    fim = time()
-    print('Tempo de execução BubbleSort: %f' %(fim - inicio))
+
 
 main()
