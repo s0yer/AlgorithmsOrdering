@@ -1,48 +1,56 @@
 #Libraries imported
 #Bibliotecas importadas
-from Listas import *
-from random import *
 from Funcoes import *
-from Algoritmos import *
-
+from Listas import *
 
 def main():
+
     esperando_entrada = True
 
     while esperando_entrada:
         print('Escolha a opção: ')
-        print('l: cria lista de tamanho n random')
-        print('f: cria lista fibonacci de tamanho n embaralhada')
-        print('p: Mostrar os participantes:')
-        print('m: Minerar um novo bloco')
-        print('h: Manipular o blockchain')
-        print('o: Obtem saldo do participante')
+
+        print('d: Define o tamanho da lista')
+        print('l: Cria lista de tamanho n random')
+        print('f: Cria lista fibonacci de tamanho n embaralhada')
+        print('p: Imprime lista')
+        print('r: Embaralha lista')
+        print('i: Tempo de execução InsertionSort')
+        print('b: Tempo de execução BubbleSort')
+        print('c: Compara tempo de execução InsertionSort e BubbleSort')
         print('s: Sair. ')
 
-    escolha = escolhaUsuario()
+        escolha = escolhaUsuario()
 
-    #Create new established list and sort
-    #Cria nova lista estabelecida e ordena
-    novalista = listaRandom(10)
-    print(sorted(novalista))
+        if escolha == 'd':
+            valorLista = int(obtemValorLista())
 
-    #Create a Fibonacci Sequence with 'n' positions
-    #Cria uma Sequencia de Fibonacci com 'n' posições
-    listaFib = listaFibonacci(10**3)
+        elif escolha == 'l':
+            lista = listaRandom(valorLista)
 
-    
-    #Shuffles the list -> listaFib
-    #Embaralha a lista -> listaFib
-    shuffle(listaFib)
-    print(listaFib)
-    
+        elif escolha == 'f':
+            lista = listaFibonacci(valorLista)
 
-    
-    #Shuffles the list -> listaFib
-    #Embaralha a lista -> listaFib
-    shuffle(listaFib)
-    print(listaFib)
-    
+        elif escolha == 'p':
+            print(lista)
+
+        elif escolha == 'r':
+            embaralhaLista(lista)
+
+        elif escolha == 'i':
+            tempoExeInsertionSort(lista)
+
+        elif escolha == 'b':
+            tempoExeBubbleSort(lista)
+
+        elif escolha == 'c':
+            comparaAlgoritimos(tempoExeBubbleSort(lista),tempoExeInsertionSort(lista))
+
+        elif escolha == 's':
+            esperando_entrada = False
+
+        else:
+            print('Entrada inválida, pegue um valor das opções! ')
 
 
 main()
