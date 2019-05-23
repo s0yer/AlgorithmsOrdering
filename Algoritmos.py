@@ -1,7 +1,7 @@
 
-#Algorithms Functions
+# Algorithms Functions
 
-#Algoritmo InsertionSort implementado
+# Algoritmo InsertionSort implementado
 def insertionSort(k):
     for i in range(1,len(k)):
         j = i
@@ -12,7 +12,7 @@ def insertionSort(k):
         k[j] = temp
     return k
 
-#Algoritmo BubleSort implementado
+# Algoritmo BubleSort implementado
 def bubbleSort(lista):
     elementos = len(lista)-1
     ordenado = False
@@ -23,3 +23,18 @@ def bubbleSort(lista):
                lista[i], lista[i+1] = lista[i+1],lista[i]
                ordenado = False
     return lista
+
+# Algorítmo SelectionSort implementado
+def SelectionSort(A):
+    for i in range(len(A)):
+
+        # Encontra o elemento mínimo no vetor não classificado
+        min_idx = i
+        for j in range(i + 1, len(A)):
+            if A[min_idx] > A[j]:
+                min_idx = j
+
+        # Troca o elemento mínimo encontrado com o primeiro elemento
+        A[i], A[min_idx] = A[min_idx], A[i]
+
+    return A
