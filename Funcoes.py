@@ -2,6 +2,7 @@ from time import *
 from Algoritmos import *
 from Listas import *
 
+#calcula e retorna o tempo de execução do algoritmo insertionSort
 def tempoExeInsertionSort(lista):
 
     # Order and check execution time Insertion Sort
@@ -14,6 +15,7 @@ def tempoExeInsertionSort(lista):
     tempoInsertion = fim - inicio
     print('Tempo de execução InsertionSort: %f' % (tempoInsertion))
     return tempoInsertion
+
 
 def tempoExeBubbleSort(lista):
 

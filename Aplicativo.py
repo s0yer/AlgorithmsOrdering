@@ -3,8 +3,11 @@
 from Funcoes import *
 from Listas import *
 
+
+
 def main():
 
+    #interface com o usuário
     esperando_entrada = True
 
     while esperando_entrada:

@@ -1,6 +1,7 @@
 
 #Algorithms Functions
 
+#Algoritmo InsertionSort implementado
 def insertionSort(k):
     for i in range(1,len(k)):
         j = i
@@ -11,6 +12,7 @@ def insertionSort(k):
         k[j] = temp
     return k
 
+#Algoritmo BubleSort implementado
 def bubbleSort(lista):
     elementos = len(lista)-1
     ordenado = False
