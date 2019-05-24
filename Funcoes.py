@@ -30,10 +30,22 @@ def tempoExeBubbleSort(lista):
     print('Tempo de execução BubbleSort: %f' % (tempoBubble))
     return tempoBubble
 
+#Calcula e retorna o tempo de execução do algoritmo SelectionSort
+def tempoExeSelectionSort(lista):
+    embaralhaLista(lista)
+    inicio = time()
+    SelectionSort(lista)
+    fim = time()
+    print(lista)
+    tempoSelection = fim - inicio
+    print('Tempo de execução SelectionSort: %f' % (tempoSelection))
+    return tempoSelection
+
     #Obtem a escolhado usuário
 def escolhaUsuario():
     escolha = input('Sua escolha: ')
     return escolha
+
     #Obtem o valor do tamanho do vetor que será escolhido pelo usuário
 def obtemValorLista():
     valor = input('digite um valor: ')

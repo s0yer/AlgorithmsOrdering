@@ -20,8 +20,9 @@ def main():
         print('r: Embaralha lista')
         print('i: Tempo de execução InsertionSort')
         print('b: Tempo de execução BubbleSort')
+        print('s: Tempo de execução SelectionSort')
         print('c: Compara tempo de execução InsertionSort e BubbleSort')
-        print('s: Sair. ')
+        print('e: Exit / Sair ')
 
         escolha = escolhaUsuario()
 
@@ -46,10 +47,13 @@ def main():
         elif escolha == 'b':
             tempoExeBubbleSort(lista)
 
+        elif escolha == 's':
+            tempoExeSelectionSort(lista)
+
         elif escolha == 'c':
             comparaAlgoritimos(tempoExeBubbleSort(lista),tempoExeInsertionSort(lista))
 
-        elif escolha == 's':
+        elif escolha == 'e':
             esperando_entrada = False
 
         else:
