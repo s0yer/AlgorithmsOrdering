@@ -34,12 +34,14 @@ def tempoExeBubbleSort(lista):
 def tempoExeSelectionSort(lista):
     embaralhaLista(lista)
     inicio = time()
-    SelectionSort(lista)
+    selectionSort(lista)
     fim = time()
     print(lista)
     tempoSelection = fim - inicio
     print('Tempo de execução SelectionSort: %f' % (tempoSelection))
     return tempoSelection
+
+
 
     #Obtem a escolhado usuário
 def escolhaUsuario():

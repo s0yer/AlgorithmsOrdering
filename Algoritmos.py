@@ -25,7 +25,7 @@ def bubbleSort(lista):
     return lista
 
 # Algorítmo SelectionSort implementado
-def SelectionSort(A):
+def selectionSort(A):
     for i in range(len(A)):
 
         # Encontra o elemento mínimo no vetor não classificado
@@ -38,3 +38,23 @@ def SelectionSort(A):
         A[i], A[min_idx] = A[min_idx], A[i]
 
     return A
+
+
+def shellSort(array):
+    # Classificação do shell usando o seq de gap: n/2, n/4, ..., 1.
+    gap = len(array) // 2
+
+    # Loop sobre os gaps
+    while gap > 0:
+
+        # Faz o insertionSort
+        for i in range(gap, len(array)):
+            val = array[i]
+            j = i
+            while j >= gap and array[j - gap] > val:
+                array[j] = array[j - gap]
+                j -= gap
+            array[j] = val
+
+        gap //= 2
+    return array
