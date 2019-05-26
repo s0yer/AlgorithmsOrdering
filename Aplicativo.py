@@ -50,6 +50,9 @@ def main():
         elif escolha == 's':
             tempoExeSelectionSort(lista)
 
+        elif escolha == 'h':
+            tempoExeShellSort(lista)
+
         elif escolha == 'c':
             comparaAlgoritimos(tempoExeBubbleSort(lista),tempoExeInsertionSort(lista))
 

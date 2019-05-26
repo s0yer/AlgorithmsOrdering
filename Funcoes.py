@@ -41,7 +41,15 @@ def tempoExeSelectionSort(lista):
     print('Tempo de execução SelectionSort: %f' % (tempoSelection))
     return tempoSelection
 
-
+def tempoExeShellSort(lista):
+    embaralhaLista(lista)
+    inicio = time()
+    shellSort(lista)
+    fim = time()
+    print(lista)
+    tempoShell = fim - inicio
+    print('Tempo de execução SelectionSort: %f' % (tempoShell))
+    return tempoShell
 
     #Obtem a escolhado usuário
 def escolhaUsuario():
