@@ -41,6 +41,7 @@ def tempoExeSelectionSort(lista):
     print('Tempo de execução SelectionSort: %f' % (tempoSelection))
     return tempoSelection
 
+#Calcula e retorna o tempo de execução do algoritmo ShellSort
 def tempoExeShellSort(lista):
     embaralhaLista(lista)
     inicio = time()
@@ -48,7 +49,7 @@ def tempoExeShellSort(lista):
     fim = time()
     print(lista)
     tempoShell = fim - inicio
-    print('Tempo de execução SelectionSort: %f' % (tempoShell))
+    print('Tempo de execução ShellSort: %f' % (tempoShell))
     return tempoShell
 
     #Obtem a escolhado usuário
@@ -77,6 +78,24 @@ def executaBubbleSort(lista):
     return lista
 
     #Função que compara tempo de execução de 2 algorítmos
-def comparaAlgoritimos(tempoB, tempoA):
-    difTempo = tempoB - tempoA
+def comparaAlgoritimos(tempoBubble, tempoSelection):
+    difTempo = tempoBubble - tempoSelection
     return print('A diferença de tempo entre os dois algoritmos e de: %f' %difTempo)
+
+def comparaTodosAlgoritimos(tempoBubble, tempoInsertion, tempoSelection, tempoShell):
+
+    menorTempo = tempoBubble
+
+    if(tempoInsertion < menorTempo):
+        menorTempo = tempoInsertion
+
+    elif(tempoSelection < menorTempo):
+        menorTempo = tempoSelection
+
+    elif(tempoShell < menorTempo):
+        menorTempo = tempoShell
+
+    else:
+        menorTempo = tempoBubble
+
+    return menorTempo
