@@ -82,20 +82,18 @@ def comparaAlgoritimos(tempoBubble, tempoSelection):
     difTempo = tempoBubble - tempoSelection
     return print('A diferença de tempo entre os dois algoritmos e de: %f' %difTempo)
 
+    #Função que acha o menor valor e maior valor de tempo dos algorítmos
 def comparaTodosAlgoritimos(tempoBubble, tempoInsertion, tempoSelection, tempoShell):
 
-    menorTempo = tempoBubble
+    arrayTempos = [tempoBubble]
+    arrayTempos.append(tempoInsertion)
+    arrayTempos.append(tempoSelection)
+    arrayTempos.append(tempoShell)
 
-    if(tempoInsertion < menorTempo):
-        menorTempo = tempoInsertion
+    menorTempo = min(arrayTempos)
+    maiorTempo = max(arrayTempos)
 
-    elif(tempoSelection < menorTempo):
-        menorTempo = tempoSelection
+    print('O menor tempo é igual a : %f' %menorTempo)
+    print('O maior tempo é igual a : %f' %maiorTempo)
 
-    elif(tempoShell < menorTempo):
-        menorTempo = tempoShell
-
-    else:
-        menorTempo = tempoBubble
-
-    return menorTempo
+    return (menorTempo,maiorTempo)
