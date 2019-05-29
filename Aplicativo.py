@@ -54,11 +54,14 @@ def main():
         elif escolha == 'h':
             tempoExeShellSort(lista)
 
+        elif escolha == 'm':
+            tempoExeMergeSort(lista)
+
         elif escolha == 'c':
             comparaAlgoritimos(tempoExeBubbleSort(lista),tempoExeInsertionSort(lista))
 
         elif escolha == 't':
-            print(comparaTodosAlgoritimos(tempoExeBubbleSort(lista), tempoExeInsertionSort(lista), tempoExeSelectionSort(lista), tempoExeShellSort(lista)))
+            print(comparaTodosAlgoritimos(tempoExeBubbleSort(lista), tempoExeInsertionSort(lista), tempoExeSelectionSort(lista), tempoExeShellSort(lista), tempoExeMergeSort(lista)))
 
         elif escolha == 'e':
             esperando_entrada = False

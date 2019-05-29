@@ -52,6 +52,17 @@ def tempoExeShellSort(lista):
     print('Tempo de execução ShellSort: %f' % (tempoShell))
     return tempoShell
 
+#Calcula e retorna o tempo de execução do algoritmo MergeSort
+def tempoExeMergeSort(lista):
+    embaralhaLista(lista)
+    inicio = time()
+    mergeSort(lista)
+    fim = time()
+    print(lista)
+    tempoMerge = fim - inicio
+    print('Tempo de execução ShellSort: %f' % (tempoMerge))
+    return tempoMerge
+
     #Obtem a escolhado usuário
 def escolhaUsuario():
     escolha = input('Sua escolha: ')
@@ -83,12 +94,13 @@ def comparaAlgoritimos(tempoBubble, tempoSelection):
     return print('A diferença de tempo entre os dois algoritmos e de: %f' %difTempo)
 
     #Função que acha o menor valor e maior valor de tempo dos algorítmos
-def comparaTodosAlgoritimos(tempoBubble, tempoInsertion, tempoSelection, tempoShell):
+def comparaTodosAlgoritimos(tempoBubble, tempoInsertion, tempoSelection, tempoShell, tempoMerge):
 
     arrayTempos = [tempoBubble]
     arrayTempos.append(tempoInsertion)
     arrayTempos.append(tempoSelection)
     arrayTempos.append(tempoShell)
+    arrayTempos.append(tempoMerge)
 
     menorTempo = min(arrayTempos)
     maiorTempo = max(arrayTempos)
