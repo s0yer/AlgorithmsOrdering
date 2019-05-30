@@ -1,4 +1,3 @@
-
 # Algorithms Functions
 
 # Algoritmo InsertionSort implementado
@@ -93,3 +92,48 @@ def mergeSort(array):
             k += 1
 
     return array
+
+def QuickSort(lista, inicio, fim):
+    if inicio < fim:
+        divide = partition(lista, inicio, fim)
+        QuickSort(lista, inicio, divide -1)
+        QuickSort(lista, divide+1, fim)
+        return lista
+    else:
+        return lista
+
+def partition(list, start, end):
+    pivot = list[end]
+    bottom = start-1
+    top = end
+
+    done = 0
+    while not done:
+
+        while not done:
+            bottom = bottom + 1
+
+            if bottom == top:
+                done = 1
+                break
+
+            if list[bottom] > pivot:
+                list[top] = list[bottom]
+                break
+
+        while not done:
+            top = top - 1
+
+            if top == bottom:
+                done = 1
+                break
+
+            if list[top] < pivot:
+                list[bottom] = list[top]
+                break
+
+    list[top] = pivot
+    return top
+
+
+

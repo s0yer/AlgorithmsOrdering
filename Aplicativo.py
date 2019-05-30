@@ -7,6 +7,9 @@ from Listas import *
 
 def main():
 
+    lista = 0
+    tamanhoLista = 0
+
     #interface com o usuário
     esperando_entrada = True
 
@@ -28,13 +31,13 @@ def main():
         escolha = escolhaUsuario()
 
         if escolha == 'd':
-            valorLista = int(obtemValorLista())
+            tamanhoLista = int(obtemValorLista())
 
         elif escolha == 'l':
-            lista = listaRandom(valorLista)
+            lista = listaRandom(tamanhoLista)
 
         elif escolha == 'f':
-            lista = listaFibonacci(valorLista)
+            lista = listaFibonacci(tamanhoLista)
 
         elif escolha == 'p':
             print(lista)
@@ -57,11 +60,14 @@ def main():
         elif escolha == 'm':
             tempoExeMergeSort(lista)
 
+        elif escolha == 'q':
+            tempoExeQuickSort(lista, tamanhoLista)
+
         elif escolha == 'c':
             comparaAlgoritimos(tempoExeBubbleSort(lista),tempoExeInsertionSort(lista))
 
         elif escolha == 't':
-            print(comparaTodosAlgoritimos(tempoExeBubbleSort(lista), tempoExeInsertionSort(lista), tempoExeSelectionSort(lista), tempoExeShellSort(lista), tempoExeMergeSort(lista)))
+            print(comparaTodosAlgoritimos(tempoExeBubbleSort(lista), tempoExeInsertionSort(lista), tempoExeSelectionSort(lista), tempoExeShellSort(lista), tempoExeMergeSort(lista), tempoExeQuickSort(lista, tamanhoLista)))
 
         elif escolha == 'e':
             esperando_entrada = False
