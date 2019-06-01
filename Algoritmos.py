@@ -98,9 +98,9 @@ def QuickSort(lista, inicio, fim):
         divide = partition(lista, inicio, fim)
         QuickSort(lista, inicio, divide -1)
         QuickSort(lista, divide+1, fim)
-        return lista
     else:
-        return lista
+        return
+
 
 def partition(list, start, end):
     pivot = list[end]
