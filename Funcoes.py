@@ -108,6 +108,7 @@ def comparaAlgoritimos(tempoBubble, tempoSelection):
     #Função que acha o menor valor e maior valor de tempo dos algorítmos
 def comparaTodosAlgoritimos(tempoBubble, tempoInsertion, tempoSelection, tempoShell, tempoMerge, tempoQuick):
 
+    #construção do array com os tempos de execução dos algoritimos
     arrayTempos = [tempoBubble]
     arrayTempos.append(tempoInsertion)
     arrayTempos.append(tempoSelection)

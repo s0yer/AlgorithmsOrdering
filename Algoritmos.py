@@ -93,7 +93,9 @@ def mergeSort(array):
 
     return array
 
+
 def QuickSort(lista, inicio, fim):
+    if inicio < fim:
     if inicio < fim:
         divide = partition(lista, inicio, fim)
         QuickSort(lista, inicio, divide -1)
@@ -102,6 +104,7 @@ def QuickSort(lista, inicio, fim):
         return
 
 
+# função usada para particionar no meio o array no algorítimo QuickSort
 def partition(list, start, end):
     pivot = list[end]
     bottom = start-1
